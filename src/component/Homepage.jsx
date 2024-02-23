@@ -9,6 +9,7 @@ import Review from "./review";
 import WorldMap from "./worldMap";
 import Milestone from "./milestone";
 import VideoPage from "./videopage";
+import Footer from "./footer";
 
 function Homepage() {
 
@@ -25,6 +26,7 @@ function Homepage() {
         <WorldMap />
         <Milestone />
         <VideoPage />
+        <Footer />
         
         </div>
     )
