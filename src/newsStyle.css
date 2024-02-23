@@ -119,7 +119,7 @@
     transition: all .5s ease
 }
 
-.is-animated .animate__item .milestones__title {
+ .animate__item .milestones__title {
     color: #fed501
 }
 

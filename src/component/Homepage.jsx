@@ -8,6 +8,7 @@ import InvestmentPlan from "./investmentPlan";
 import Review from "./review";
 import WorldMap from "./worldMap";
 import Milestone from "./milestone";
+import VideoPage from "./videopage";
 
 function Homepage() {
 
@@ -23,6 +24,7 @@ function Homepage() {
         <Review />
         <WorldMap />
         <Milestone />
+        <VideoPage />
         
         </div>
     )
