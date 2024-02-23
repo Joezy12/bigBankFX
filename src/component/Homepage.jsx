@@ -7,6 +7,7 @@ import Flexibilty from "./flexibilty";
 import InvestmentPlan from "./investmentPlan";
 import Review from "./review";
 import WorldMap from "./worldMap";
+import Milestone from "./milestone";
 
 function Homepage() {
 
@@ -21,6 +22,8 @@ function Homepage() {
         <InvestmentPlan />
         <Review />
         <WorldMap />
+        <Milestone />
+        
         </div>
     )
 }

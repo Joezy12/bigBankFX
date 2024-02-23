@@ -51,7 +51,8 @@ function Navbar() {
             </div>
             <div className='phone-nav'>
                 <div className='logo'><img src={redbull} alt="" /><h2>BigBankFX</h2></div>
-                <div onClick={open}>{openNav ? <i className='bi-x'></i>: <i className='bi-list'></i>}</div>
+                <div onClick={open}>{openNav ? <i className='bi-x'></i>: <i className='bi-list'></i>
+                }</div>
             </div>
         </section>
     )
