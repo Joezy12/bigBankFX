@@ -22,6 +22,7 @@ function Navbar() {
                 <div className='logo logo1'><img src={redbull} alt="" /><h2>BigBankFX</h2></div>
                 <div className="nav-links">
                     <ul>
+                        <li><NavLink to="." className="navlink">Home</NavLink></li>
                         <li><NavLink to="aboutUs" className="navlink">About Us</NavLink></li>
                         <li>Our Service</li>
                         <li>Legal Information</li>
@@ -38,6 +39,7 @@ function Navbar() {
                 <div className='logo logo1'><img src={redbull} alt="" /><h2>BigBankFX</h2></div>
                 <div className="nav-links">
                     <ul>
+                    <li><NavLink to="." className="navlink"  onClick={open}>Home</NavLink></li>
                         <li><NavLink to="aboutUs" className="navlink" onClick={open}>About Us</NavLink></li>
                         <li>Our Service</li>
                         <li>Legal Information</li>
