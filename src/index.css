@@ -629,6 +629,14 @@ color: #aab2cf;
 
 @media screen and (max-width: 1100px){
 
+  .hero-left p {
+    display: none;
+  }
+
+  .hero-left .bright-p {
+    display: block;
+  }
+
   .footer {
     margin-top: 150px;
     width: 100%;
