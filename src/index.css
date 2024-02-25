@@ -122,7 +122,7 @@ body {
   border-radius: 15px;
   border: none;
   background: gold;
-  color: white;
+  color: black;
   box-shadow: 4px 0px 10px gold;
 }
 
@@ -360,6 +360,12 @@ text-align: center;
   margin-top: 80px;
 }
 
+.navlink {
+  color:rgba(255,255,255,0.7);
+  text-decoration: none;
+  
+}
+
 .invest-box {
   width: 340px;
   height: 270px;
@@ -369,6 +375,9 @@ text-align: center;
   gap: 1rem;
   border-radius: 10px;
   background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://img.freepik.com/free-photo/gold-abstract-background-abstract-oil-bubble-texture-wallpaper_53876-142976.jpg");
+   background-size: cover;
+   color: black;
+   font-weight: 600;
 }
 
 .plan {
@@ -393,6 +402,7 @@ text-align: center;
 .small-text {
   font-size: 14px;
   opacity: 0.7;
+  color: black;
 }
 
 .thick-text {
@@ -403,7 +413,7 @@ text-align: center;
 
 .white {
   font-weight: 800;
-  color: white;
+  color: black;
 }
 
 .review {
@@ -494,6 +504,7 @@ text-align: center;
   border-radius: 10px;
   flex-direction: column;
   text-align: center;
+  color: black;
 }
 
 .bottom-world {

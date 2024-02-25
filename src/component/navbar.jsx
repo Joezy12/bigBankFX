@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import redbull from '../../public/redbull.png'
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
 
@@ -21,7 +22,7 @@ function Navbar() {
                 <div className='logo logo1'><img src={redbull} alt="" /><h2>BigBankFX</h2></div>
                 <div className="nav-links">
                     <ul>
-                        <li>About US</li>
+                        <li><NavLink to="aboutUs" className="navlink">About Us</NavLink></li>
                         <li>Our Service</li>
                         <li>Legal Information</li>
                         <li>Help Center</li>
@@ -37,7 +38,7 @@ function Navbar() {
                 <div className='logo logo1'><img src={redbull} alt="" /><h2>BigBankFX</h2></div>
                 <div className="nav-links">
                     <ul>
-                        <li>About US</li>
+                        <li><NavLink to="aboutUs" className="navlink" onClick={open}>About Us</NavLink></li>
                         <li>Our Service</li>
                         <li>Legal Information</li>
                         <li>Help Center</li>

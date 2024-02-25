@@ -10,12 +10,13 @@ import WorldMap from "./worldMap";
 import Milestone from "./milestone";
 import VideoPage from "./videopage";
 import Footer from "./footer";
+import TradingView from "./tradingview";
 
 function Homepage() {
 
     return (
         <div className="homepage">
-        <Navbar />
+
         <Hero />
         <SatisfiedCustomers />
         <Partners />
@@ -26,7 +27,7 @@ function Homepage() {
         <WorldMap />
         <Milestone />
         <VideoPage />
-        <Footer />
+       
         
         </div>
     )
