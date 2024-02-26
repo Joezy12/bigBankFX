@@ -3,6 +3,8 @@ import { Routes, Route} from "react-router-dom";
 import Navbar from "./component/navbar";
 import Footer from "./component/footer";
 import AboutUs from "./component/aboutus";
+import OurServices from "./component/ourservices";
+
 
 function App() {
   
@@ -12,6 +14,7 @@ function App() {
   <Routes>
     <Route index element={<Homepage />} />
     <Route path="aboutUs" element={<AboutUs />} />
+    <Route path="services" element={<OurServices lll />} />
   </Routes>
   <Footer />
 </section>

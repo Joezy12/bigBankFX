@@ -600,6 +600,7 @@ color: #aab2cf;
 
 .about h1 {
   font-size: 40px;
+  color: gold;
 }
 
 .about h2 {
@@ -614,8 +615,51 @@ color: #aab2cf;
   color: #858092;
 }
 
+.our-services {
+  padding: 40px 250px;
+  display: flex;
+  flex-direction: column;
+ gap: 3rem;
+}
 
 
+.our-services h1 {
+  font-size: 40px;
+  color: gold;
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-box h2 {
+  font-size: 35px;
+}
+
+.service-box button {
+  width: 130px;
+  height: 40px;
+  font-weight: 800;
+  border: none;
+  color: black;
+  background: gold;
+  border-radius: 6px;
+}
+
+.service-box p {
+  width: 70%;
+  font: 20px;
+  line-height: 28px;
+  color: #7480A2;
+}
+
+.services-body {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+}
 
 
 
@@ -671,6 +715,17 @@ color: #aab2cf;
 
 
 @media screen and (max-width: 1100px){
+
+  .service-box p {
+    width: 100%;
+  }
+
+  .our-services {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+   gap: 3rem;
+  }
 
   .about h2 {
    font-weight: 500;
