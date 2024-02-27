@@ -82,6 +82,21 @@ function OurServices() {
                 </div>
 
 
+                <div className="service-box">
+                    <img src="https://totalenergies.com/sites/g/files/nytnzq121/files/styles/w_1110/public/images/2020-04/Visuel-ambition-p%C3%A9trole-gaz_0.jpg?itok=9Itg70Eq" alt="" width="100%"/>
+
+                    <h2>
+                    Oil and Gas
+                    </h2>
+                    <p>
+                    Surprising as it might be, anyone can invest in the oil market to make a profit. Indeed, the development of online trading platforms has allowed individuals to use their savings to speculate on rising or falling oil prices...
+                    </p>
+
+                    <button>Read more</button>
+
+                </div>
+
+
             </div>
         </div>
     )
