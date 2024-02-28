@@ -5,6 +5,7 @@ import Footer from "./component/footer";
 import AboutUs from "./component/aboutus";
 import OurServices from "./component/ourservices";
 import LegalInformation from "./component/legalInformation";
+import Contact from "./component/contact";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <Route path="aboutUs" element={<AboutUs />} />
     <Route path="services" element={<OurServices lll />} />
     <Route path="legal" element={<LegalInformation />} />
+    <Route path="contact" element={<Contact />} />
   </Routes>
   <Footer />
 </section>

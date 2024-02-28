@@ -26,7 +26,7 @@ function Navbar() {
                         <li><NavLink to="aboutUs" className="navlink">About Us</NavLink></li>
                         <li><NavLink to="services" className="navlink">Our Services</NavLink></li>
                         <li><NavLink to="legal" className="navlink">Legal Information</NavLink></li>
-                        <li>Help Center</li>
+                        <li><NavLink to="contact" className="navlink">Help Center</NavLink></li>
                         <li>Terms of Use</li>
                     </ul>
                 </div>
@@ -43,7 +43,7 @@ function Navbar() {
                         <li><NavLink to="aboutUs" className="navlink" onClick={open}>About Us</NavLink></li>
                         <li><NavLink to="services" className="navlink" onClick={open}>Our Services</NavLink></li>
                         <li><NavLink to="legal" className="navlink" onClick={open}>Legal Information</NavLink></li>
-                        <li>Help Center</li>
+                        <li><NavLink to="contact" className="navlink" onClick={open}>Help Center</NavLink></li>
                         <li>Terms of Use</li>
                     </ul>
                 </div>

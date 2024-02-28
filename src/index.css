@@ -702,6 +702,114 @@ color: #aab2cf;
   font-weight: 800;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 40px;
+}
+
+.contact h1 {
+  font-size: 43px;
+  color: gold;
+}
+
+.contact .p {
+  font-size: 22px;
+  color: #7480A2;
+  text-align: center;
+}
+
+.contact h3 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact h3 img {
+  width: 60px;
+}
+
+.mail-box {
+  width: 70%;
+  background-color: #2d2d2d;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 15px;
+}
+
+.mail-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail-inputs p {
+  font-size: 19px;
+  color: #7480A2;
+}
+
+
+.mail-inputs input {
+  color: white;
+  width: 70%;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 15px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #7480A2;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.mail-inputs input:focus {
+  outline: none;
+}
+
+.mail-box textarea:focus {
+  outline: none;
+}
+
+
+.mail-box textarea {
+  width: 70%;
+  height: 200px;
+  border-radius: 15px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #7480A2;
+  padding: 10px 15px;
+  font-size: 18px;
+  color: white;
+}
+
+
+.contact button {
+  width: 70%;
+  height: 60px;
+  font-size: 20px;
+  color: black;
+  font-weight: 800;
+  background-color: gold;
+  border: none;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -751,6 +859,27 @@ color: #aab2cf;
 
 
 @media screen and (max-width: 1100px){
+  
+  .contact {
+    padding: 0px 20px;
+  }
+
+  .mail-box {
+    width: 100%;
+  }
+
+  .mail-inputs input {
+   width: 100%;
+  }
+
+  .mail-inputs textarea {
+    width: 100%;
+  }
+
+  .contact button {
+    width: 100%;
+  }
+
 
   .service-box p {
     width: 100%;
@@ -890,7 +1019,7 @@ color: #aab2cf;
     justify-content: initial;
     gap: 4rem;
     margin-top: 60px;
-    padding: 0px 70px;
+    padding: 0px 10px;
    overflow: auto;
    width: 100%;
    
