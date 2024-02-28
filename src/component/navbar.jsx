@@ -27,7 +27,7 @@ function Navbar() {
                         <li><NavLink to="services" className="navlink">Our Services</NavLink></li>
                         <li><NavLink to="legal" className="navlink">Legal Information</NavLink></li>
                         <li><NavLink to="contact" className="navlink">Help Center</NavLink></li>
-                        <li>Terms of Use</li>
+                        <li><NavLink to="term" className="navlink">Terms Of Use</NavLink></li>
                     </ul>
                 </div>
                 <div className="sign-btns">
@@ -44,7 +44,7 @@ function Navbar() {
                         <li><NavLink to="services" className="navlink" onClick={open}>Our Services</NavLink></li>
                         <li><NavLink to="legal" className="navlink" onClick={open}>Legal Information</NavLink></li>
                         <li><NavLink to="contact" className="navlink" onClick={open}>Help Center</NavLink></li>
-                        <li>Terms of Use</li>
+                        <li><NavLink to="term" className="navlink" onClick={open}>Terms Of Use</NavLink></li>
                     </ul>
                 </div>
                 <div className="sign-btns">

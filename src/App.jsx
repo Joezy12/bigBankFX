@@ -6,7 +6,7 @@ import AboutUs from "./component/aboutus";
 import OurServices from "./component/ourservices";
 import LegalInformation from "./component/legalInformation";
 import Contact from "./component/contact";
-
+import TermOfUse from "./component/termofuse";
 
 function App() {
   
@@ -19,6 +19,7 @@ function App() {
     <Route path="services" element={<OurServices lll />} />
     <Route path="legal" element={<LegalInformation />} />
     <Route path="contact" element={<Contact />} />
+    <Route path="term" element={<TermOfUse />} />
   </Routes>
   <Footer />
 </section>
