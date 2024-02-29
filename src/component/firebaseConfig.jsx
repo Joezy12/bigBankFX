@@ -1,25 +1,16 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCh4OUmFpaP6JjuGGKOVsNKCpXElW6gVY0",
-  authDomain: "my-work-fcd53.firebaseapp.com",
-  projectId: "my-work-fcd53",
-  storageBucket: "my-work-fcd53.appspot.com",
-  messagingSenderId: "594710040324",
-  appId: "1:594710040324:web:10da9d2ef6e58e89d98a51",
-  measurementId: "G-55WJT25VG6"
+  apiKey: "AIzaSyAvSyftKTu4YXj7W3OaSLGLerKLvdhyZbg",
+  authDomain: "bigbankfx-85424.firebaseapp.com",
+  projectId: "bigbankfx-85424",
+  storageBucket: "bigbankfx-85424.appspot.com",
+  messagingSenderId: "277140046013",
+  appId: "1:277140046013:web:d7f99ca9d5ce7c998f37d4",
+  measurementId: "G-29X0DT2KM5"
 };
 
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-export const database = getFirestore(app);
-
-
-
-
-
-
-

@@ -833,6 +833,103 @@ color: #aab2cf;
   gap: 3rem;
 }
 
+.login {
+  width: 100%;
+  height: 90vh;
+ 
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.login {
+  width: 100%;
+  padding: 20px 150px;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.login-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+}
+
+.login-left i {
+  font-size: 20px;
+  color: gold;
+}
+
+
+.login-left h1 {
+  font-size: 70px;
+  line-height: 75px;
+}
+
+.login-right {
+  width: 50%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-right h1 {
+  text-align: center;
+  font-size: 35px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.fields input {
+  width: 100%;
+  height: 35px;
+  border-radius: 3px;
+  border: none;
+}
+
+.remember-check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.login-form button{
+ width: 110px;
+ height: 35px;
+ font-weight: 600;
+ border: none;
+ background: gold;
+}
+
+.login-form h2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.login-form h3 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+
+
+
 
 
 
@@ -888,6 +985,42 @@ color: #aab2cf;
 
 
 @media screen and (max-width: 1100px){
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    align-items: initial;
+    justify-content: initial;
+    gap: 0.1rem;
+  }
+
+  .login-left {
+    width: 100%;
+  }
+
+  .login-left p, .login-left i {
+    display: none;
+  }
+  .login-left br {
+    display: none;
+  }
+  .login-left h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .login-right {
+    width: 100%;
+  }
+
+  .login-right h1 {
+    color: gold;
+  }
+
+  .how-heading h1 span {
+    border: none;
+  }
   
   .term {
     padding: 0px 20px;

@@ -31,7 +31,7 @@ function Navbar() {
                     </ul>
                 </div>
                 <div className="sign-btns">
-                    <button className="login-btn">Login</button>
+                <NavLink to="login" className="navlink" > <button className="login-btn">Login</button></NavLink> 
                     <button className="sign-btn">Sign Up</button>
                 </div>
             </div>
@@ -48,7 +48,7 @@ function Navbar() {
                     </ul>
                 </div>
                 <div className="sign-btns">
-                    <button className="login-btn">Login</button>
+                <NavLink to="login" className="navlink" onClick={open}> <button className="login-btn">Login</button></NavLink>  
                     <button className="sign-btn">Sign Up</button>
                 </div>
             </div>
