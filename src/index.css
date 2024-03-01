@@ -7,11 +7,12 @@
 
 
 body {
-  background: linear-gradient(to right bottom, #0C0E13, #0C0E13);
-  color: white;
+  background: #0C0E13 ;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   scroll-behavior: smooth;
 }
+
+
 
 .navbar {
   display: flex;
@@ -992,6 +993,134 @@ color: #aab2cf;
   border-radius: 5px;
   font-weight: 600;
 }
+
+.dashboard-nav {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.dash-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dash-logo {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 15px 0px 15px 20px;
+}
+
+
+.dash-left input {
+  border: none;
+  background: #eee;
+ height: 40px;
+padding-left: 10px;
+width: 250px;
+border-radius: 0px 6px 6px 0px;
+}
+
+.dash-search {
+  display: flex;
+}
+
+.dash-s-icon {
+  height: 40px;
+  width: 30px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  border-radius: 6px 0px 0px 6px;
+}
+
+
+.dash-right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.dash-r-icon {
+  font-size: 20px;
+  width: 40px;
+  height:40px;
+  background: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.user {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.user-pic {
+  width: 40px;
+  height: 40px;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1yXuD_6bSuzN-1bSpmsnYYbHzAKJ5WkiGGwkJmtGOyw&s");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.error-box {
+  padding: 20px 20px;
+  background: rgba(244, 170, 157, 0.962);
+  color: red;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: 1s linear;
+  animation: fade-in 0.6s linear 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

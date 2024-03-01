@@ -1,7 +1,7 @@
 
 
 
-function Login() {
+function Login(prop) {
 
     return (
         <div className="login">
@@ -16,16 +16,19 @@ function Login() {
                 </div>
             </div>
             <div className="login-right">
+                {prop.showErr ? <div className="error-box">
+                 <p>{prop.errText}</p>
+                </div>: ""}
                 <h1>Sign in</h1>
-                <form className="login-form">
+                <form className="login-form" onSubmit={prop.submitLog}>
                     <div className="fields">
                         <p>Email Address </p>
-                        <input type="email" />
+                        <input type="email"  name="email" onChange={prop.gatherLog} />
                     </div>
 
                     <div className="fields">
                         <p>Password</p>
-                        <input type="password" />
+                        <input type="password" name="password" onChange={prop.gatherLog} />
                     </div>
 
                     <div className="remember-check">
