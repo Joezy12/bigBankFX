@@ -216,7 +216,7 @@ body {
 }
 
 @keyframes slide-up {
-  from{transform: translate(0px, 40px);opacity: 0;}
+  from{transform: translate(0px, -40px);opacity: 0;}
   to{transform: translate(0px, 0px); opacity: 1;}
 }
 
@@ -601,11 +601,13 @@ color: #aab2cf;
 .about h1 {
   font-size: 40px;
   color: gold;
+  animation: slide-in 0.5s ease-in;
 }
 
 .about h2 {
   font-size: 27px;
   line-height: 39px;
+  animation: slide-in 0.8s ease-in;
 }
 
 .about p {
@@ -613,6 +615,7 @@ color: #aab2cf;
   line-height: 24px;
   margin-top: 18px;
   color: #858092;
+  animation: slide-up 0.8s linear;
 }
 
 .our-services {
@@ -836,11 +839,12 @@ color: #aab2cf;
 .login {
   width: 100%;
   height: 90vh;
- 
+
   display: flex;
   gap: 3rem;
   align-items: center;
   justify-content: center;
+  background-size: cover;
 }
 
 
@@ -897,8 +901,16 @@ color: #aab2cf;
   height: 35px;
   border-radius: 3px;
   border: none;
+  padding-left: 20px;
 }
 
+.fields p {
+  margin-bottom: 10px;
+}
+
+:focus {
+  outline: none;
+}
 .remember-check {
   display: flex;
   align-items: center;
@@ -927,6 +939,59 @@ color: #aab2cf;
   margin-top: 20px;
 }
 
+.sign-up {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-box {
+  background: #2d2d2d;
+  width: 50%;
+  height: 90vh;
+  padding: 30px 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.double-input {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+ 
+}
+
+.sign-box h1 {
+  font-size: 35px;
+  color: gold;
+}
+
+.sign-input {
+  width: 100%;
+}
+
+.sign-box input {
+  width: 100%;
+  height: 35px;
+ padding-left: 20px;
+  
+}
+
+.sign-box p {
+  margin-bottom: 10px;
+}
+
+
+.sign-box button {
+  background: gold;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
 
 
 
@@ -985,6 +1050,18 @@ color: #aab2cf;
 
 
 @media screen and (max-width: 1100px){
+
+
+  .sign-box {
+    width: 100%;
+    background: transparent;
+    margin-top: 40px;
+  }
+
+  .double-input {
+    display: flex;
+    flex-direction: column;
+  }
 
   .login {
     display: flex;

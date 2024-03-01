@@ -32,7 +32,7 @@ function Navbar() {
                 </div>
                 <div className="sign-btns">
                 <NavLink to="login" className="navlink" > <button className="login-btn">Login</button></NavLink> 
-                    <button className="sign-btn">Sign Up</button>
+                <NavLink to="signup" className="navlink" >   <button className="sign-btn">Sign Up</button> </NavLink>
                 </div>
             </div>
             <div className="navbar navbar2" style={deco}>
@@ -49,7 +49,7 @@ function Navbar() {
                 </div>
                 <div className="sign-btns">
                 <NavLink to="login" className="navlink" onClick={open}> <button className="login-btn">Login</button></NavLink>  
-                    <button className="sign-btn">Sign Up</button>
+                <NavLink to="signup" className="navlink" onClick={open}>   <button className="sign-btn">Sign Up</button> </NavLink>
                 </div>
             </div>
             <div className='phone-nav'>

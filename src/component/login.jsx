@@ -19,7 +19,7 @@ function Login() {
                 <h1>Sign in</h1>
                 <form className="login-form">
                     <div className="fields">
-                        <p>Email Address</p>
+                        <p>Email Address </p>
                         <input type="email" />
                     </div>
 

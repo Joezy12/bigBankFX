@@ -8,6 +8,7 @@ import LegalInformation from "./component/legalInformation";
 import Contact from "./component/contact";
 import TermOfUse from "./component/termofuse";
 import Login from "./component/login";
+import SignUp from "./component/signup";
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
     <Route path="contact" element={<Contact />} />
     <Route path="term" element={<TermOfUse />} />
     <Route path="login" element={<Login />} />
+    <Route path="signup" element={<SignUp />} />
   </Routes>
   <Footer />
 </section>
