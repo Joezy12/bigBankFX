@@ -5,8 +5,12 @@
  
 }
 
+button {
+  color: black;
+}
+
 input {
-  font-size: 21px;
+  font-size: 17px;
 }
 
 
