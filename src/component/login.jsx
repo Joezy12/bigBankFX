@@ -1,9 +1,23 @@
+import { useState } from "react";
 
 
 
 function Login(prop) {
 
+   const [showPassword, setShowPassword] = useState(false);
+
+   function showP() {
+    setShowPassword((prev)=> {
+        return !prev;
+    })
+   }
     return (
+
+        <section>
+
+           {prop.loadState ?  <div className="loader-box">
+                <div className="loader"></div>
+            </div>: ""}
         <div className="login">
             <div className="login-left">
                 <h1>Welcome <br /> Back</h1>
@@ -28,7 +42,9 @@ function Login(prop) {
 
                     <div className="fields">
                         <p>Password</p>
-                        <input type="password" name="password" onChange={prop.gatherLog} />
+                       <div className="pass">
+                       <input type={showPassword ? "text" : "password"} name="password" onChange={prop.gatherLog} className="eye-input" /><div className="eye" onClick={showP}>{showPassword ? <i className="bi-eye"></i>: <i className="bi-eye-slash"></i>}</div>
+                       </div>
                     </div>
 
                     <div className="remember-check">
@@ -47,6 +63,7 @@ function Login(prop) {
 
             </div>
         </div>
+        </section>
     )
 }
 

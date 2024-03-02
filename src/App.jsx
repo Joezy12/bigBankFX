@@ -19,6 +19,8 @@ import { useNavigate } from "react-router-dom";
 
 function App() {
 
+  const [loading, setLoading] = useState(false);
+
   const [errorText, setErrorText] = useState("");
 
   const [showError, setShowError] = useState(false);
@@ -110,12 +112,14 @@ function App() {
   }
 
   function loginFunc(event) {
+    setLoading(true);
     event.preventDefault();
      signInWithEmailAndPassword(auth, loginInfo.email, loginInfo.password)
      .then((response)=> {
-      alert("logged in")
+    
       console.log(response.user.uid);
       setActiveUid(response.user.uid);
+      setLoading(false);
       navigate("welcome")
      })
      .catch((error)=> {
@@ -126,6 +130,7 @@ function App() {
       }
    
       setShowError(true);
+      setLoading(false);
       setTimeout(()=> {
         setShowError(false)
       }, 5000)
@@ -144,7 +149,7 @@ function App() {
     <Route path="legal" element={<LegalInformation />} />
     <Route path="contact" element={<Contact />} />
     <Route path="term" element={<TermOfUse />} />
-    <Route path="login" element={<Login gatherLog={gatherLoginInfo} submitLog={loginFunc} showErr={showError} errText={errorText} />} />
+    <Route path="login" element={<Login gatherLog={gatherLoginInfo} submitLog={loginFunc} showErr={showError} errText={errorText} loadState={loading} />} />
     <Route path="signup" element={<SignUp gatherFunc={gatherSignInfo} submitFunc={createUser} />} />
     <Route path="welcome" element={<WelcomePage funct={removeNav} myuid={activeUid}/>} />
   </Routes>
