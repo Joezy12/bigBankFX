@@ -37,6 +37,7 @@ function App() {
     userName: "",
     email: "",
     password: "",
+    confirmPassword: "",
   })
   
   const [loginInfo, setLoginInfo] = useState({
@@ -62,7 +63,7 @@ function App() {
       [event.target.name]: event.target.value,
       }
     })
-    console.log(signInfo);
+ 
   }
 
 
@@ -73,7 +74,7 @@ function App() {
       [event.target.name]: event.target.value,
       }
     })
-    console.log(loginInfo);
+ 
   }
 
 
@@ -85,6 +86,7 @@ function App() {
       lastName: signInfo.lastName,
       userName: signInfo.userName,
       email: signInfo.email,
+      
     })
     .then((response)=> {
       alert("data added");
@@ -98,16 +100,29 @@ function App() {
 
   function createUser(event) {
     event.preventDefault();
+    setLoading(true);
     createUserWithEmailAndPassword(auth, signInfo.email, signInfo.password)
     .then((response)=> {
       alert("successfully created");
       console.log(response.user.uid);
       storeUserInfo(response.user.uid);
       setActiveUid(response.user.uid);
+      setLoading(false);
       navigate("login")
     })
     .catch((error)=> {
-      alert(error.message)
+      alert(error.message);
+      if(error.message == "Firebase: Error (auth/network-request-failed).") {
+        setErrorText("No internet connection, connect to an internt and try again!")
+       }else if(error.message == "Firebase: Error (auth/invalid-credential).") {
+         setErrorText("Invalid email and password");
+       }
+      setShowError(true);
+      setLoading(false);
+      setTimeout(()=> {
+        setShowError(false)
+      }, 5000);
+      
     })
   }
 
@@ -140,7 +155,7 @@ function App() {
   
   
   return (
-<section className="app" style={stylo}>
+<section className="app" >
 {showNavbar ? <Navbar /> : ""}
   <Routes>
     <Route index element={<Homepage />} />
@@ -150,7 +165,7 @@ function App() {
     <Route path="contact" element={<Contact />} />
     <Route path="term" element={<TermOfUse />} />
     <Route path="login" element={<Login gatherLog={gatherLoginInfo} submitLog={loginFunc} showErr={showError} errText={errorText} loadState={loading} />} />
-    <Route path="signup" element={<SignUp gatherFunc={gatherSignInfo} submitFunc={createUser} />} />
+    <Route path="signup" element={<SignUp gatherFunc={gatherSignInfo} submitFunc={createUser} loadState={loading} errText={errorText} showErr={showError}/>} />
     <Route path="welcome" element={<WelcomePage funct={removeNav} myuid={activeUid}/>} />
   </Routes>
   {showNavbar ? <Footer /> : ""}
