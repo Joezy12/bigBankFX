@@ -39,7 +39,8 @@ function WelcomePage(props) {
             }));
 
              localStorage.setItem('userDa', JSON.stringify(userInfo[0].data()));
-           
+             window.location.reload(false);
+             setRealUser(userInfo[0].data());
            
 
          
@@ -51,10 +52,7 @@ function WelcomePage(props) {
    }, [userData]);
 
    
-   useEffect(()=> {
-    setRealUser(JSON.parse(localStorage.getItem('userDa')));
-   }, [])
-
+ 
  
 
     
