@@ -12,56 +12,64 @@ function WelcomePage(props) {
     const [userUid, setUserUid] = useState(props.myuid);
     const [userInfo, setUserInfo] = useState([]);
     const [realUser, setRealUser] = useState({
-       userName: "",
+        userName: "",
     })
 
-     const [userData, setUserData] = useState([]);
-
-    
-
-     let name = userUid;
-
-  
+    const [userData, setUserData] = useState([]);
 
 
-     
+
+    let name = userUid;
 
 
 
 
-   useEffect(()=> {
+
+
+
+
+     useEffect(()=> {
 
         getDocs(collectionRef)
-        .then((response)=> {
-            setUserData(response.docs);
-            setUserInfo(userData.filter((ele)=> {
-                return ele.id == name;
-            }));
+            .then((response) => {
+                setUserData(response.docs);
+                setUserInfo(userData.filter((ele) => {
+                    return ele.id == name;
+                }));
 
-            setRealUser(userInfo[0].data());
-            //  localStorage.setItem('userDa', JSON.stringify(userInfo[0].data()));
-            //  window.location.reload(false)
-           
-        })
-   }, [userData]);
+               
+               if(!localStorage.getItem('userDa')) {
+                setRealUser(JSON.parse(localStorage.getItem('userDa')));
+               }
+             
+                   
+        
+            
+                setRealUser(JSON.parse(localStorage.getItem('userDa')));
 
-   
-//    useEffect(()=> {
-    // setRealUser(JSON.parse(localStorage.getItem('userDa')));
-//    }, [])
-
+            })
  
 
-    
-    
+     }, [])
+ 
+
+
+    //    useEffect(()=> {
+    // setRealUser(JSON.parse(localStorage.getItem('userDa')));
+    //    }, [])
+
+
+
+
+
     props.funct();
     return (
         <div className="welcome-page">
-         <DashboardNav name={realUser.userName} />
-          
-           <div className="dash-body">
-          <DashLeftNav />
-           </div>
+            <DashboardNav name={realUser.userName} />
+
+            <div className="dash-body">
+                <DashLeftNav />
+            </div>
         </div>
     )
 }
