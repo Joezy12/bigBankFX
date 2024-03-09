@@ -41,12 +41,6 @@ function WelcomePage(props) {
              localStorage.setItem('userDa', JSON.stringify(userInfo[0].data()));
              window.location.reload(false)
            
-
-         
-
-
-          
-            
         })
    }, [userData]);
 

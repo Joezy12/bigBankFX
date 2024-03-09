@@ -1290,6 +1290,18 @@ border-radius: 0px 6px 6px 0px;
 
 @media screen and (max-width: 1100px){
 
+  .fields input {
+   border: none;
+   background: transparent;
+   border-bottom: 1px solid gold;
+  }
+
+  .eye {
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid gold ;
+  }
+
 
   .sign-box {
     width: 100%;
