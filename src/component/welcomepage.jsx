@@ -38,16 +38,17 @@ function WelcomePage(props) {
                 return ele.id == name;
             }));
 
-             localStorage.setItem('userDa', JSON.stringify(userInfo[0].data()));
-             window.location.reload(false)
+            setRealUser(userInfo[0].data());
+            //  localStorage.setItem('userDa', JSON.stringify(userInfo[0].data()));
+            //  window.location.reload(false)
            
         })
    }, [userData]);
 
    
-   useEffect(()=> {
-    setRealUser(JSON.parse(localStorage.getItem('userDa')));
-   }, [])
+//    useEffect(()=> {
+    // setRealUser(JSON.parse(localStorage.getItem('userDa')));
+//    }, [])
 
  
 
