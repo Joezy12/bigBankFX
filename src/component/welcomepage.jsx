@@ -39,7 +39,7 @@ function WelcomePage(props) {
 
                
                if(!localStorage.getItem('userDa')) {
-                setRealUser(JSON.parse(localStorage.getItem('userDa')));
+                localStorage.setItem('userDa', JSON.stringify(userInfo[0].data()));
                }
              
                    
