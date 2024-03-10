@@ -9,11 +9,13 @@ function WelcomePage(props) {
 
 
     const collectionRef = collection(database, 'users')
-    const [userUid, setUserUid] = useState(props.myuid);
+    const [userUid, setUserUid] = useState(`${localStorage.getItem("userId")}`);
     const [userInfo, setUserInfo] = useState([]);
-    const [realUser, setRealUser] = useState({
-        userName: "",
-    })
+    const [realUser, setRealUser] = useState([
+        {
+            userName: "",
+        }
+    ])
 
     const [userData, setUserData] = useState([]);
 
@@ -21,6 +23,8 @@ function WelcomePage(props) {
 
     let name = userUid;
 
+    let userInfo2;
+    let userData2;
 
 
 
@@ -28,24 +32,30 @@ function WelcomePage(props) {
 
 
 
-     useEffect(()=> {
+
+     useEffect( ()=> {
 
         getDocs(collectionRef)
             .then((response) => {
-                setUserData(response.docs);
+                userData2 = response.docs;
                 setUserInfo(userData.filter((ele) => {
-                    return ele.id == name;
+                    return ele.id == userUid;
                 }));
 
-               
-               if(!localStorage.getItem('userDa')) {
-                localStorage.setItem('userDa', JSON.stringify(userInfo[0].data()));
-               }
-             
-                   
+                userInfo2 = userData2.filter((ele) => {
+                    return ele.id == userUid;
+                })
+
+                  console.log(userUid);
+
+                
         
+                console.log(userInfo2[0].data());
+
+                setRealUser(userInfo2[0].data());
             
-                setRealUser(JSON.parse(localStorage.getItem('userDa')));
+             
+              
 
             })
  

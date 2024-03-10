@@ -132,8 +132,9 @@ function App() {
      signInWithEmailAndPassword(auth, loginInfo.email, loginInfo.password)
      .then((response)=> {
     
-      console.log(response.user.uid);
+      
       setActiveUid(response.user.uid);
+      localStorage.setItem('userId', `${response.user.uid}`);
       setLoading(false);
       navigate("welcome")
      })
