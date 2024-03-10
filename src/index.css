@@ -1209,6 +1209,44 @@ border-radius: 0px 6px 6px 0px;
   border-left: 4px solid red;
 }
 
+.account-created {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+.account-c-pic {
+  width: 500px;
+  height: 250px;
+
+  
+}
+
+.account-c-text button {
+  background: gold;
+  width: 200px;
+  height: 40px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.account-c-text {
+  text-align: center;
+}
+.account-c-text h1 {
+  font-size: 40px;
+}
+
+.account-c-text p{
+  padding: 5px 450px;
+  opacity: 0.7;
+}
+
 
 
 
@@ -1289,6 +1327,28 @@ border-radius: 0px 6px 6px 0px;
 
 
 @media screen and (max-width: 1100px){
+
+  
+.account-c-pic {
+  width: 100%;
+  height: 250px;
+
+  
+}
+
+.account-created {
+  padding: 50px 25px 20px 25px;
+}
+  
+  input {
+    color: white;
+  }
+
+  .account-c-text p{
+    padding: 5px 20px;
+    opacity: 0.7;
+  }
+
 
   .fields input {
    border: none;

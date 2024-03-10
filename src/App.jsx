@@ -15,6 +15,7 @@ import { app, database } from "./component/firebaseConfig";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import AccountCreated from "./component/accountCreated";
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
  
 
   const auth = getAuth();
+
+  const [userName, setUserName] = useState('');
 
   const [signInfo, setSignInfo] = useState({
     firstName: "",
@@ -108,7 +111,8 @@ function App() {
       storeUserInfo(response.user.uid);
       setActiveUid(response.user.uid);
       setLoading(false);
-      navigate("login")
+      setUserName(signInfo.userName)
+      navigate("accountCreated")
     })
     .catch((error)=> {
       alert(error.message);
@@ -168,6 +172,7 @@ function App() {
     <Route path="login" element={<Login gatherLog={gatherLoginInfo} submitLog={loginFunc} showErr={showError} errText={errorText} loadState={loading} />} />
     <Route path="signup" element={<SignUp gatherFunc={gatherSignInfo} submitFunc={createUser} loadState={loading} errText={errorText} showErr={showError}/>} />
     <Route path="welcome" element={<WelcomePage funct={removeNav} myuid={activeUid}/>} />
+    <Route path="accountCreated" element={<AccountCreated userName={userName} />} />
   </Routes>
   {showNavbar ? <Footer /> : ""}
 </section>
