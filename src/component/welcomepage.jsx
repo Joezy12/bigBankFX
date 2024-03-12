@@ -4,6 +4,7 @@ import DashboardNav from "./dashboardNav";
 import DashLeftNav from "./dashLeftNav";
 import { app, database } from "./firebaseConfig";
 import { collection, addDoc, doc, setDoc, getDocs } from "firebase/firestore";
+import DashBody from "./dashBody";
 
 function WelcomePage(props) {
 
@@ -14,6 +15,8 @@ function WelcomePage(props) {
     const [realUser, setRealUser] = useState([
         {
             userName: "",
+            firstName: "",
+            capitalBalance: 0,
         }
     ])
 
@@ -79,6 +82,7 @@ function WelcomePage(props) {
 
             <div className="dash-body">
                 <DashLeftNav />
+                <DashBody userName={realUser.firstName} capitalBalance={realUser.capitalBalance}/>
             </div>
         </div>
     )

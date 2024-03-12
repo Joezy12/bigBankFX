@@ -41,6 +41,9 @@ function App() {
     email: "",
     password: "",
     confirmPassword: "",
+    capitalBalance: 0,
+    availableBalance: 0,
+    totalBalance: 0,
   })
   
   const [loginInfo, setLoginInfo] = useState({
@@ -89,6 +92,7 @@ function App() {
       lastName: signInfo.lastName,
       userName: signInfo.userName,
       email: signInfo.email,
+      capitalBalance: signInfo.capitalBalance, 
       
     })
     .then((response)=> {

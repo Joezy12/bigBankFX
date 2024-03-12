@@ -855,6 +855,7 @@ color: #aab2cf;
   align-items: center;
   justify-content: center;
   background-size: cover;
+  animation: fade-in 1.3s linear 1;
 }
 
 
@@ -960,6 +961,7 @@ color: #aab2cf;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  animation: slider 0.6s linear 1;
 }
 .sign-box {
   background: #2d2d2d;
@@ -1166,6 +1168,7 @@ border-radius: 0px 6px 6px 0px;
   background: #0C0E13;
   overflow: auto;
   color: white;
+  
 }
 
 .dash-l-nav {
@@ -1209,6 +1212,11 @@ border-radius: 0px 6px 6px 0px;
   border-left: 4px solid red;
 }
 
+@keyframes slider {
+  from {transform: translate(500px, 0px);}
+  to{transform: translate(0px, 0px);}
+}
+
 .account-created {
   display: flex;
   align-items: center;
@@ -1216,7 +1224,7 @@ border-radius: 0px 6px 6px 0px;
   padding: 20px 0px;
   flex-direction: column;
   gap: 2rem;
-
+  animation: slider 0.6s linear 1;
 }
 
 .account-c-pic {
@@ -1245,6 +1253,210 @@ border-radius: 0px 6px 6px 0px;
 .account-c-text p{
   padding: 5px 450px;
   opacity: 0.7;
+}
+
+.dash-body {
+  display: flex;
+
+}
+
+
+
+.my-dash-body {
+  margin-top: 100px;
+  margin-left: 300px;
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.d-h-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+
+.d-h-top h1 {
+  font-size: 30px;
+}
+
+.d-h-top button {
+  width: 130px;
+  background: gold;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.account-info {
+  margin-top: 30px;
+  background: #2d2d2d;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.7);
+  border-radius: 4px;
+}
+
+.account-money {
+  display: flex;
+  gap: 4rem;
+}
+
+.add-money {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.middle-account {
+  margin-top: 30px;
+}
+
+.add-account {
+  height: 220px;
+  background: #2d2d2d;
+  padding: 20px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 4px;
+}
+
+.add-account h2 {
+  color: gold;
+  font-size: 20px;
+}
+
+.add-account .gold-p {
+  color: gold;
+  opacity: 1;
+}
+
+.add-account p {
+  opacity: 0.7;
+}
+
+.add-money button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 20px;
+  background: gold;
+}
+
+.account-balance p {
+  color: gold;
+  margin-bottom: 9px;
+}
+
+.account-balance h1 {
+  font-size: 30px;
+}
+
+
+.middle-account {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.the-plans {
+  padding: 20px;
+  width: 400px;
+  background: #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  gap: 0.8rem;
+  height: 220px;
+}
+
+.vest {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.full {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.full-container {
+  width: 280px;
+  height: 8px;
+  background: #E8EDF4;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 1px 0px 5px rgba(0,0,0,0.8) inset;
+}
+
+.full-bar {
+  width: 30%;
+  height: 11px;
+  background: gold;
+  border-radius: 20px;
+  box-shadow: 1px 0px 5px rgba(0,0,0,0.8);
+}
+
+.bar3 {
+  width: 100%;
+}
+
+.bar2 {
+  width: 60%;
+}
+
+.vest p {
+  font-size: 13px;
+}
+
+.vest i {
+  color: #00D27A;
+}
+
+.transaction-history {
+  background: #2d2d2d;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.transaction-history p {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.phone-nav2 {
+  z-index: 8;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  background: #2d2d2d;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  
+}
+
+.phone-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.phone-link i {
+  font-size: 30px;
 }
 
 
@@ -1328,7 +1540,61 @@ border-radius: 0px 6px 6px 0px;
 
 @media screen and (max-width: 1100px){
 
+  @keyframes slider {
+     from {transform: translate(500px, 0px);}
+     to{transform: translate(0px, 0px);}
+  }
+
+  .dashboard-nav {
+    display: none;
+  }
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  align-items: initial;
+}
+
+.account-money {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.account-balance {
+  align-items: initial;
+  justify-content: initial;
+  background: #2d2d2d;
+  padding: 20px;
+}
+
+  .my-dash-body {
+    margin-top: 40px;
+    margin-left: 0px;
+    width: 100%;
+    padding: 0px 0px;
+  }
+
+  .the-plans {
+    height: 250px;
+  }
+
+ 
+  .dash-home {
+    padding: 0px 30px;
+  }
   
+
+  .dash-l-nav {
+    display: none;
+  }
+
+  .add-account {
+    height: 250px;
+  }
+
+
 .account-c-pic {
   width: 100%;
   height: 250px;
@@ -1336,8 +1602,13 @@ border-radius: 0px 6px 6px 0px;
   
 }
 
+
+
+
+
 .account-created {
   padding: 50px 25px 20px 25px;
+  animation: slider 0.6s linear 1;
 }
   
   input {
