@@ -1459,6 +1459,41 @@ border-radius: 0px 6px 6px 0px;
   font-size: 30px;
 }
 
+.homer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: gold;
+  color: black;
+  font-weight: 800;
+  transform: translate(0px, -30px);
+}
+
+.homer i {
+  font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1554,12 +1589,15 @@ border-radius: 0px 6px 6px 0px;
   flex-direction: column;
   background: transparent;
   align-items: initial;
+  padding: 0px 0px;
+  box-shadow: none;
 }
 
 .account-money {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+
 }
 
 .account-balance {
@@ -1567,6 +1605,11 @@ border-radius: 0px 6px 6px 0px;
   justify-content: initial;
   background: #2d2d2d;
   padding: 20px;
+  border-radius: 5px;
+}
+
+.add-money {
+  display: none;
 }
 
   .my-dash-body {
@@ -1583,6 +1626,7 @@ border-radius: 0px 6px 6px 0px;
  
   .dash-home {
     padding: 0px 30px;
+    margin-bottom: 150px;
   }
   
 
@@ -1919,8 +1963,32 @@ border-radius: 0px 6px 6px 0px;
 }
 
 
-@media screen and (max-width: 500px){
 
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 610px){
+
+  .middle-account {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-account {
+width: 100%;
+  }
+
+  .the-plans {
+    width: 100%;
+  }
+  
   .video-box {
     margin-top: 50px;
     width: 80%;
@@ -1984,4 +2052,48 @@ border-radius: 0px 6px 6px 0px;
 }
 
 
+}
+
+
+
+@media screen and (max-width: 450px){
+
+.phone-link i {
+  font-size: 18px;
+}
+
+.phone-link p {
+  font-size: 14px;
+}
+
+.homer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: gold;
+  color: black;
+  font-weight: 800;
+  transform: translate(0px, -25px);
+}
+
+.homer i {
+  font-size: 25px;
+}
+
+.phone-nav2 {
+  height: 75px;
+}
+
+.d-h-top button {
+  font-size: 10px;
+  width: 90px;
+}
+
+.d-h-top h1{
+  font-size: 25px;
+}
+
+.full-container {
+  width: 240px;
+}
 }

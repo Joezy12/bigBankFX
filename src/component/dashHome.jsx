@@ -5,7 +5,7 @@ function DashHome(props) {
     return (
         <div className="dash-home">
             <div className="d-h-top">
-                <h1>Hello {props.userName}</h1>
+                <h1>Hello, {props.userName}</h1>
                 <button>Add new project</button>
             </div>
 

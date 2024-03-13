@@ -11,9 +11,9 @@ function PhoneNav() {
         </div>
 
 
-        <div className="phone-link">
+        <div className="phone-link homer">
             <i className="bi-grid"></i>
-            <p>dashboard</p>
+         
         </div>
 
         <div className="phone-link">
