@@ -7,7 +7,7 @@ function PhoneNav() {
 
         <div className="phone-link">
             <i className="bi-folder"></i>
-            <p>Accounts</p>
+            <p>Account</p>
         </div>
 
 
