@@ -17,8 +17,8 @@ function PhoneNav() {
         </div>
 
         <div className="phone-link">
-            <i className="bi-person"></i>
-            <p>Deposit</p>
+            <i className="bi-three-dots"></i>
+            <p>More</p>
         </div>
         </div>
     )
