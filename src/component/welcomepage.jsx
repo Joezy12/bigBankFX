@@ -17,6 +17,7 @@ function WelcomePage(props) {
             userName: "",
             firstName: "",
             capitalBalance: 0,
+            lastName: "",
         }
     ])
 
@@ -82,7 +83,7 @@ function WelcomePage(props) {
 
             <div className="dash-body">
                 <DashLeftNav />
-                <DashBody userName={realUser.firstName} capitalBalance={realUser.capitalBalance}/>
+                <DashBody userName={realUser.firstName} capitalBalance={realUser.capitalBalance} lastName={realUser.lastName} name={realUser.userName}/>
             </div>
         </div>
     )

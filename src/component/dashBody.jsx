@@ -8,10 +8,10 @@ function DashBody(prop) {
 
     return(
         <div className="my-dash-body">
-        <PhoneTop />
+        <PhoneTop lastName={prop.lastName} userName={prop.userName}/>
         <PhoneNav />
        <Routes>
-        <Route index element={<DashHome userName={prop.userName} capitalBalance={prop.capitalBalance} />}/>
+        <Route index element={<DashHome userName={prop.userName} capitalBalance={prop.capitalBalance} lastName={prop.lastName} name={prop.name}/>}/>
        </Routes>
         </div>
     )
