@@ -6,7 +6,7 @@ function PhoneTop() {
            <div className="phoner">
            <div className="phone-pic"></div>
             <div className="phone-text">
-                <h3>Joseph Oyebode</h3>
+                <p>Joseph Oyebode</p>
             </div>
            </div>
         </div>
