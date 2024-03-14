@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom";
 
 function DashHome(props) {
 
@@ -23,7 +23,7 @@ function DashHome(props) {
 
                    <div className="butts">
                     <button className="but1">History</button>
-                    <button className="but2">Deposit</button>
+                    <NavLink to="deposit" className="linko">   <button className="but2">Deposit</button> </NavLink>
                     <button className="but3">withdraw</button>
                    </div>
 
