@@ -3,6 +3,7 @@ import DashHome from "./dashHome";
 import PhoneNav from "./phoneNav";
 import PhoneTop from "./phoneTop";
 import Deposit from "./deposit";
+import DepositMoney from "./depositMoney";
 
 
 function DashBody(prop) {
@@ -14,6 +15,7 @@ function DashBody(prop) {
        <Routes>
         <Route index element={<DashHome userName={prop.userName} capitalBalance={prop.capitalBalance} lastName={prop.lastName} name={prop.name}/>}/>
         <Route path="deposit" element={<Deposit />} />
+        <Route path="depositMoney" element={<DepositMoney />} />
        </Routes>
         </div>
     )

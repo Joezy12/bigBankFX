@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 
 function Deposit() {
@@ -39,7 +40,7 @@ function Deposit() {
                         </div>
                     </div>
 
-                    <button>Choose</button>
+                 <NavLink to="../depositMoney" className="nav-linker">  <button>Choose</button> </NavLink>
                 </div>
 
 
