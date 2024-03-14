@@ -1,14 +1,18 @@
+import redBull from '../../public/redbull.png'
+
 
 function PhoneTop(prop) {
 
     return (
         <div className="phone-top">
-           <div className="phoner">
-           <div className="phone-pic"></div>
-            <div className="phone-text">
-                <p>{prop.userName} {prop.lastName}</p>
+            <div className="phone-logo">
+            <img src={redBull} alt="" />
+            <h1>BigBankFX</h1>
             </div>
-           </div>
+            <div className="phoner">
+                <div className="phone-pic"></div>
+            
+            </div>
         </div>
     )
 }

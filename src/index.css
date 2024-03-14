@@ -1475,10 +1475,10 @@ border-radius: 0px 6px 6px 0px;
 
 .phone-top {
   display: none;
-  margin: 5px 10px 30px 30px;
+  margin: 5px 20px 30px 20px;
   align-items: center;
   gap: 1rem;
-
+justify-content: space-between;
   
 }
 
@@ -1498,7 +1498,53 @@ border-radius: 0px 6px 6px 0px;
   background-size: cover;
 }
 
+.phone-logo img {
+  width: 40px;
+}
 
+.phone-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: gold;
+}
+
+.butts {
+  display: none;
+}
+
+.but1 {
+  background: #748194;
+  
+}
+
+.but2 {
+  background: #2C7BE5;
+}
+
+.but3 {
+  background: #F5803E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
@@ -1599,10 +1645,38 @@ border-radius: 0px 6px 6px 0px;
 
 @media screen and (max-width: 1100px){
 
+  .butts {
+    display: flex;
+    gap: 1rem;
+  }
+
+.butts button {
+  padding: 5px 20px;
+  font-size: 17px;
+  color: white;
+  border-radius: 5px;
+}
+
   @keyframes slider {
      from {transform: translate(500px, 0px);}
      to{transform: translate(0px, 0px);}
   }
+
+.d-h-top button{
+  display: none;
+}
+
+.d-h-top {
+  background: #054e3c;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.d-h-top h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #50CE69;
+}
 
   .dashboard-nav {
     display: none;
@@ -1619,7 +1693,7 @@ border-radius: 0px 6px 6px 0px;
 
 .account-money {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 3rem;
 
 }
@@ -1630,6 +1704,9 @@ border-radius: 0px 6px 6px 0px;
   background: #2d2d2d;
   padding: 20px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .add-money {
@@ -2008,6 +2085,14 @@ border-radius: 0px 6px 6px 0px;
 
 @media screen and (max-width: 610px){
 
+
+  .d-h-top h1 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #50CE69;
+  }
+
+
   .middle-account {
     display: flex;
     flex-direction: column;
@@ -2090,6 +2175,11 @@ width: 100%;
 
 @media screen and (max-width: 450px){
 
+  .account-balance h1 {
+    opacity: 0.6;
+    font-size: 17px;
+  }
+
 .phone-link i {
   font-size: 18px;
 }
@@ -2122,10 +2212,25 @@ width: 100%;
 }
 
 .d-h-top h1{
-  font-size: 25px;
+  font-size: 16px;
 }
 
 .full-container {
   width: 240px;
 }
+}
+
+@media screen and (max-width: 380px){
+
+  .butts button {
+    padding: 5px 18px;
+    font-size: 15px;
+   
+  }
+
+  .full-container {
+    width: 200px;
+  }
+  
+
 }

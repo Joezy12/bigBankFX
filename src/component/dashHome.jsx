@@ -20,6 +20,13 @@ function DashHome(props) {
                         <p>Available Profit:</p>
                         <h1>&#8358; 8,000</h1>
                     </div>
+
+                   <div className="butts">
+                    <button className="but1">History</button>
+                    <button className="but2">Deposit</button>
+                    <button className="but3">withdraw</button>
+                   </div>
+
                     <div className="account-balance">
                         <p>Total balance:</p>
                         <h1>&#8358; 0.00</h1>
