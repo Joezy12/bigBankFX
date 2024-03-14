@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom";
 
 function PhoneNav() {
 
@@ -7,14 +7,14 @@ function PhoneNav() {
 
         <div className="phone-link">
             <i className="bi-folder"></i>
-            <p>Account</p>
+            <NavLink to="deposit" className="linko">   <p>Account</p> </NavLink>
         </div>
 
 
-        <div className="phone-link homer">
+        <NavLink to="." className="linko">  <div className="phone-link homer">
             <i className="bi-grid"></i>
          
-        </div>
+        </div> </NavLink>
 
         <div className="phone-link">
             <i className="bi-three-dots"></i>

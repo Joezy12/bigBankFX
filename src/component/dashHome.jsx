@@ -18,7 +18,7 @@ function DashHome(props) {
                     </div>
                     <div className="account-balance">
                         <p>Available Profit:</p>
-                        <h1>&#8358; 8,000</h1>
+                        <h1>&#8358; 0.00 </h1>
                     </div>
 
                    <div className="butts">

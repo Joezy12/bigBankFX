@@ -175,7 +175,7 @@ function App() {
     <Route path="term" element={<TermOfUse />} />
     <Route path="login" element={<Login gatherLog={gatherLoginInfo} submitLog={loginFunc} showErr={showError} errText={errorText} loadState={loading} />} />
     <Route path="signup" element={<SignUp gatherFunc={gatherSignInfo} submitFunc={createUser} loadState={loading} errText={errorText} showErr={showError}/>} />
-    <Route path="welcome" element={<WelcomePage funct={removeNav} myuid={activeUid}/>} />
+    <Route path="welcome/*" element={<WelcomePage funct={removeNav} myuid={activeUid}/>} />
     <Route path="accountCreated" element={<AccountCreated userName={userName} />} />
   </Routes>
   {showNavbar ? <Footer /> : ""}

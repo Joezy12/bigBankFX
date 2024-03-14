@@ -1527,9 +1527,80 @@ justify-content: space-between;
 }
 
 
+.dash-home {
+  margin-bottom: 150px;
+
+  
+}
+
+.linko {
+  color: white;
+  text-decoration: none;
+}
 
 
+.deposit-head h1 {
+  font-size: 35px;
+}
 
+
+.plan-box {
+  background: #2d2d2d;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.plan-box h3 {
+  background: #073E2F;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.plan-box p {
+  opacity: 0.6;
+}
+
+.plan-box button {
+ height: 40px;
+ font-weight: 800;
+ background: #073E2F;
+ color: white;
+ border-radius: 5px;
+ border: none;
+ margin-top: 10px;
+}
+
+.plans {
+  display: flex;
+ gap: 2rem;
+ margin-top: 30px;
+}
+
+.plan-box h1 {
+  color: gold;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.time-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-frame h2{
+ font-size: 16px;
+ color: gold;
+}
 
 
 
@@ -1644,6 +1715,16 @@ justify-content: space-between;
 
 
 @media screen and (max-width: 1100px){
+
+  .plans {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 100px 20px;
+  }
+
+  .deposit h1{
+    padding: 0px 20px;
+  }
 
   .butts {
     display: flex;
