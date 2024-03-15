@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 
-function Deposit() {
+function Deposit(prop) {
 
     return (
         <div className="deposit">
@@ -40,7 +40,7 @@ function Deposit() {
                         </div>
                     </div>
 
-                 <NavLink to="../depositMoney" className="nav-linker">  <button>Choose</button> </NavLink>
+                <button name="basic" onClick={prop.planAction}>Choose</button>
                 </div>
 
 
@@ -75,7 +75,7 @@ function Deposit() {
                         </div>
                     </div>
 
-                    <button>Choose</button>
+                    <button name="silver" onClick={prop.planAction}>Choose</button>
                 </div>
 
 
@@ -110,7 +110,7 @@ function Deposit() {
                         </div>
                     </div>
 
-                    <button>Choose</button>
+                    <button name="gold" onClick={prop.planAction}>Choose</button>
                 </div>
 
             </div>

@@ -1676,6 +1676,40 @@ border-radius: 4px;
 }
 
 
+.d-money h1 {
+  font-size: 30px;
+}
+
+.selected-plan {
+  padding: 6px 20px;
+  font-weight: 800;
+  background: gold;
+  width: 130px;
+  color: #0C0E13;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1782,9 +1816,16 @@ border-radius: 4px;
 
 @media screen and (max-width: 1100px){
 
+  .deposit-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
   .d-money {
     padding: 10px 20px;
   }
+
 
   .plans {
     display: flex;

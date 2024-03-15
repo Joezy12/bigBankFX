@@ -2,11 +2,14 @@ import Deposit from "./deposit"
 
 
 
-function DepositMoney() {
+function DepositMoney(props) {
+
+    let selectedPlan = props.selectedPlan;
 
     return (
         <div className="d-money">
           <h1>Deposit </h1>
+          <div className="selected-plan">{selectedPlan} plan</div>
           <form className="deposit-form">
            <h1>Form</h1>
            <div className="deposit-inputs">
@@ -24,6 +27,7 @@ function DepositMoney() {
             </div>
 
             <button>Deposit</button>
+            
 
 
            </div>
