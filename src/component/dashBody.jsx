@@ -16,6 +16,7 @@ function DashBody(prop) {
     
     function plan(event) {
         setSelectedPlan(event.target.name);
+        localStorage.setItem('myPlan', `${event.target.name}`)
         console.log(selectedPlan);
         navigate('./depositMoney');
     }

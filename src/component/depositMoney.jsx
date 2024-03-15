@@ -4,7 +4,17 @@ import Deposit from "./deposit"
 
 function DepositMoney(props) {
 
-    let selectedPlan = props.selectedPlan;
+ let amountRange;
+    let selectedPlan = localStorage.getItem('myPlan');
+
+    if(selectedPlan == "basic") {
+      amountRange = "$50 - $10,000"
+    }else if(selectedPlan == "silver") {
+      amountRange = "$10,000 - $50,000"
+    }else if(selectedPlan == "gold") {
+      amountRange = "$50,000 - infinite"
+    }
+
 
     return (
         <div className="d-money">
@@ -17,7 +27,7 @@ function DepositMoney(props) {
 
             <div className="depo">
              <p>Amount</p>
-             <input type="text" name="" id="" placeholder="$50 - $10000" />
+             <input type="text" name="" id="" placeholder={amountRange} />
             </div>
 
            
