@@ -44,6 +44,7 @@ function App() {
     capitalBalance: 0,
     availableBalance: 0,
     totalBalance: 0,
+    depositState: "success",
   })
   
   const [loginInfo, setLoginInfo] = useState({
@@ -93,6 +94,7 @@ function App() {
       userName: signInfo.userName,
       email: signInfo.email,
       capitalBalance: signInfo.capitalBalance, 
+      depositState: signInfo.depositState,
       
     })
     .then((response)=> {
@@ -169,7 +171,7 @@ function App() {
   <Routes>
     <Route index element={<Homepage />} />
     <Route path="aboutUs" element={<AboutUs />} />
-    <Route path="services" element={<OurServices lll />} />
+    <Route path="services" element={<OurServices/>} />
     <Route path="legal" element={<LegalInformation />} />
     <Route path="contact" element={<Contact />} />
     <Route path="term" element={<TermOfUse />} />

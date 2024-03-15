@@ -83,7 +83,7 @@ function WelcomePage(props) {
 
             <div className="dash-body">
                 <DashLeftNav />
-                <DashBody userName={realUser.firstName} capitalBalance={realUser.capitalBalance} lastName={realUser.lastName} name={realUser.userName}/>
+                <DashBody userName={realUser.firstName} capitalBalance={realUser.capitalBalance} lastName={realUser.lastName} name={realUser.userName} depositState={realUser.depositState}/>
             </div>
         </div>
     )

@@ -40,7 +40,7 @@ function Deposit(prop) {
                         </div>
                     </div>
 
-                <button name="basic" onClick={prop.planAction}>Choose</button>
+                <button name="basic" onClick={prop.plan}>Choose</button>
                 </div>
 
 
@@ -75,7 +75,7 @@ function Deposit(prop) {
                         </div>
                     </div>
 
-                    <button name="silver" onClick={prop.planAction}>Choose</button>
+                    <button name="silver" onClick={prop.plan}>Choose</button>
                 </div>
 
 
@@ -110,7 +110,7 @@ function Deposit(prop) {
                         </div>
                     </div>
 
-                    <button name="gold" onClick={prop.planAction}>Choose</button>
+                    <button name="gold" onClick={prop.plan}>Choose</button>
                 </div>
 
             </div>

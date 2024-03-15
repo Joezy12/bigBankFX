@@ -21,18 +21,24 @@ function DashBody(prop) {
         navigate('./depositMoney');
     }
 
+    localStorage.setItem('depositState', prop.depositState);
+
 
     return(
         <div className="my-dash-body">
         <PhoneTop lastName={prop.lastName} userName={prop.userName}/>
         <PhoneNav />
-       <Routes>
+
+        <Routes>
         <Route index element={<DashHome userName={prop.userName} capitalBalance={prop.capitalBalance} lastName={prop.lastName} name={prop.name}/>}/>
-        <Route path="deposit" element={<Deposit planAction={plan}/>} />
-        <Route path="depositMoney" element={<DepositMoney selectedPlan={selectedPlan}/>} />
+        <Route path="deposit" element={<Deposit plan={plan} />} />
+        <Route path="depositMoney" element={<DepositMoney selectedPlan={selectedPlan} name={prop.name} depositState={prop.depositState}/>} />
        </Routes>
         </div>
     )
 }
+
+
+
 
 export default DashBody;
