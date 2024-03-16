@@ -64,42 +64,9 @@ function DepositMoney(props) {
 
 
     if(depositState == "undefined") {
-      showDepositState = <div className="d-money">
-      <h1>Deposit </h1>
-      <div className="selected-plan">{selectedPlan} plan</div>
-      <form className="deposit-form" onSubmit={submitDeposit}>
-       <h1>Form</h1>
-       <div className="deposit-inputs">
-        <p className="d-i">Welcome, {props.name}</p>
-  
-        <div className="depo">
-         <p>Amount</p>
-         <input type="number" name="selectedAmount" id="" placeholder={amountRange} onChange={gatherDepo} />
-        </div>
-  
-        <div className="depo">
-         <p>Account holder's name</p>
-         <input type="text" name="accountName" id="" placeholder="" onChange={gatherDepo} />
-        </div>
-  
-        <div className="depo">
-         <p>Bank Name</p>
-         <input type="text" name="bankName" id="" placeholder="" onChange={gatherDepo} />
-        </div>
-  
-       
-        <div className="depo">
-         <p>Upload a document for proof of payment (e.g, transaction receipt)</p>
-         <input type="file" name="" id="" placeholder="$50 - $10000" />
-        </div>
-  
-        <button>Deposit</button>
-        
-  
-  
-       </div>
-      </form>
-    </div>;
+      showDepositState = <div className="loader-box">
+      <div className="loader"></div>
+  </div>;
     }
     
     
