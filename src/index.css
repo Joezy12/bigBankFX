@@ -1904,6 +1904,8 @@ input:focus + label {
     padding: 15px 10px;
   }
 
+
+
   .deposit-details {
   display: flex;
   flex-direction: column;
@@ -2483,6 +2485,10 @@ width: 100%;
   color: black;
   font-weight: 800;
   transform: translate(0px, -25px);
+}
+
+.transaction-details h3 {
+  font-size: 15px;
 }
 
 .homer i {
