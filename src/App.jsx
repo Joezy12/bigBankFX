@@ -95,6 +95,7 @@ function App() {
       email: signInfo.email,
       capitalBalance: signInfo.capitalBalance, 
       depositState: signInfo.depositState,
+      pendingDepoit: "",
       
     })
     .then((response)=> {

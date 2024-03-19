@@ -1,14 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Deposit from "./deposit";
 import { app, database } from "./firebaseConfig";
-import { collection, doc, updateDoc, setDoc, addDoc} from "firebase/firestore";
+import { collection, doc, updateDoc, setDoc, addDoc, getDocs} from "firebase/firestore";
 
 
 
 function DepositMoney(props) {
+  const [activeDepoDate, setActiveDepoDate] =useState("");
+  const date = new Date().toDateString() + " " + new Date().getHours() + ":" + new Date().getMinutes().toString();
+    console.log(date);
 
-  const date = new Date().toDateString();
- console.log(date)
+    const myCollectionRef = collection(database, "users");
+
+    let activeDepo;
+
+    function getActiveDepo() {
+       getDocs(myCollectionRef)
+       .then((response)=> {
+         activeDepo = response.docs.filter((element)=> {
+          return element.id == `${localStorage.getItem("userId")}`;
+         });
+         setActiveDepoDate(activeDepo[0].data().pendingDeposit);
+         console.log(activeDepoDate)
+       })
+    }
+
+    getActiveDepo();
 
 
   function CreateDepoHistory() {
@@ -18,6 +35,7 @@ function DepositMoney(props) {
       amount: depositDetails.selectedAmount,
       status: "pending",
       bankName: depositDetails.bankName,
+      accountName: depoDetails.accountName,
     })
     .then((response)=> {
       console.log("depoHistory created")
@@ -62,8 +80,9 @@ function DepositMoney(props) {
     const docToUpdate = doc(database, "users", `${localStorage.getItem("userId")}`);
     updateDoc(docToUpdate, {
        depositState: "pending",
+       pendingDeposit: date,
     })
-    .then(()=> {``
+    .then(()=> {
       CreateDepoHistory();
       window.location.reload(false);
     })
@@ -71,6 +90,34 @@ function DepositMoney(props) {
       console.log(err.message)
     })
   }
+
+  const HistoCollectionRef = collection(database, `${props.name}`);
+
+  const [depoObject, setDepoObject] = useState({
+    amount: 0,
+    bankName: "",
+    status: "",
+    theDate: "",
+    accountName: "",
+  })
+
+  let depoArr;
+ 
+  function getHisto() {
+      getDocs(HistoCollectionRef)
+      .then((response)=> {
+      depoArr = response.docs.filter((elem)=> {
+        return elem.id == activeDepoDate;
+      });
+      setDepoObject(depoArr[0].data());
+      console.log(depoObject)
+      })
+  }
+
+
+  getHisto();
+
+
 
  let amountRange;
     let selectedPlan = localStorage.getItem('myPlan');
@@ -141,7 +188,7 @@ function DepositMoney(props) {
       showDepositState = <div className="pending-deposit">
       
         <div className="transaction-amount">
-<h1> +50,000</h1>
+<h1> +{depoObject.amount}</h1>
 <p>Deposit</p>
 <h3>Pending <i className="bi-clock"></i></h3>
         </div>
@@ -150,23 +197,24 @@ function DepositMoney(props) {
     <h1>Transaction Details</h1>
     <div className="transaction-details">
       <p>Sender's Details</p>
-      <h3>IDOWU UMORU</h3>
+      <h3>{depoObject.accountName}</h3>
     </div>
     <div className="transaction-details">
       <p>Transaction Type</p>
       <h3>DEPOSIT</h3>
     </div>
     <div className="transaction-details">
-      <p>Transaction Number</p>
-      <h3>0445673400233</h3>
+      <p>Bank Name</p>
+      <h3>{depoObject.bankName}</h3>
     </div>
     <div className="transaction-details">
       <p>Payment Method</p>
       <h3>BANK TRANSFER</h3>
     </div>
     <div className="transaction-details">
-      <p>Deposit Request Date</p>
-      <h3>March 17th, 2024 </h3>
+      <p>Deposit Request
+         Date</p>
+      <h3>{depoObject.theDate}</h3>
     </div>
      </div>
     
