@@ -99,6 +99,7 @@ function DepositMoney(props) {
     status: "",
     theDate: "",
     accountName: "",
+    
   })
 
   let depoArr;

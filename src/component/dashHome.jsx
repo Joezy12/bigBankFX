@@ -1,6 +1,32 @@
 import { NavLink } from "react-router-dom";
+import { app, database } from "./firebaseConfig";
+import { collection, doc, updateDoc, setDoc, addDoc, getDocs} from "firebase/firestore";
+import { useState } from "react";
 
 function DashHome(props) {
+
+    const historyCollectionRef = collection(database, `${props.name}`);
+    let [allHistory, setAllHistory] = useState("");
+
+    function getAllHistory() {
+       getDocs(historyCollectionRef)
+       .then((response)=> {
+        setAllHistory(response.docs.map((eachHistory)=> {
+            return  <div className="history-boxes">
+            <div className="boxo"><p>Deposit</p></div>
+            <div className={`boxo`}><p>{eachHistory.data().amount}</p></div>
+            <div className="boxo"><p>{eachHistory.data().theDate}</p></div>
+            <div className="boxo"><p>{eachHistory.data().status}</p></div>
+         </div>
+        }))
+        console.log(allHistory)
+       })
+       .catch((err)=> {
+        console.log(err.message)
+       })
+    }
+
+    getAllHistory();
 
     return (
         <div className="dash-home">
@@ -21,11 +47,11 @@ function DashHome(props) {
                         <h1>&#8358; 0.00 </h1>
                     </div>
 
-                   <div className="butts">
-                    <button className="but1">History</button>
-                    <NavLink to="deposit" className="linko">   <button className="but2">Deposit</button> </NavLink>
-                    <button className="but3">withdraw</button>
-                   </div>
+                    <div className="butts">
+                        <button className="but1">History</button>
+                        <NavLink to="deposit" className="linko">   <button className="but2">Deposit</button> </NavLink>
+                        <button className="but3">withdraw</button>
+                    </div>
 
                     <div className="account-balance">
                         <p>Total balance:</p>
@@ -82,8 +108,17 @@ function DashHome(props) {
             </div>
 
             <div className="transaction-history">
-            <h1>Transaction History</h1>
-            <p>no transaction yet</p>
+                <h1>Transaction History</h1>
+                <div className="depos">
+                <div className="history-head">
+                    <div className="boxo"><h4>Type</h4></div>
+                    <div className="boxo"><h4>Amount</h4></div>
+                    <div className="boxo"><h4>Date</h4></div>
+                    <div className="boxo"><h4>Status</h4></div>
+                </div>
+               {allHistory != "" ? allHistory : <p className="no-tr">no transaction yet</p>}
+                </div>
+                
             </div>
         </div>
     )
