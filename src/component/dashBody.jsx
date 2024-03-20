@@ -6,6 +6,7 @@ import Deposit from "./deposit";
 import DepositMoney from "./depositMoney";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Account from "./account";
 
 
 function DashBody(prop) {
@@ -33,6 +34,7 @@ function DashBody(prop) {
         <Route index element={<DashHome userName={prop.userName} capitalBalance={prop.capitalBalance} lastName={prop.lastName} name={prop.name}/>}/>
         <Route path="deposit" element={<Deposit plan={plan} />} />
         <Route path="depositMoney" element={<DepositMoney selectedPlan={selectedPlan} name={prop.name} depositState={prop.depositState}/>} />
+        <Route path="account" element={<Account />} />
        </Routes>
         </div>
     )

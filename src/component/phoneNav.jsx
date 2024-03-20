@@ -5,10 +5,10 @@ function PhoneNav() {
     return (
         <div className="phone-nav2">
 
-        <div className="phone-link">
+<NavLink to="account" className="linko">  <div className="phone-link">
             <i className="bi-folder"></i>
            <p>Account</p>
-        </div>
+        </div> </NavLink>
 
 
         <NavLink to="." className="linko">  <div className="phone-link homer">

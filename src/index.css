@@ -1206,6 +1206,7 @@ border-radius: 0px 6px 6px 0px;
 
 .d-links p:hover {
   background: #eee;
+  color: black;
 }
 
 .active-p {
@@ -1810,6 +1811,68 @@ input:focus + label {
 }
 
 
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+ gap: 2rem;
+}
+
+.account-pic {
+  width: 60%;
+  height: 300px;
+}
+
+.account-write-up h1{
+   font-size: 35px;
+}
+
+.account-write-up {
+  text-align: center;
+}
+
+.account-write-up p {
+  padding: 0px 250px;
+  margin-top: 10px;
+}
+
+.account-write-up button {
+  width: 150px;
+  height: 35px;
+  margin-top: 15px;
+  background: gold;
+  border-radius: 5px;
+  border: none;
+  font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1933,6 +1996,10 @@ input:focus + label {
 
 
 @media screen and (max-width: 1100px){
+
+  .account-write-up p {
+    padding: 0px 17px;
+  }
 
   .pending-deposit {
     padding: 15px 10px;

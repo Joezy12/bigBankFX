@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
@@ -5,6 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function DashLeftNav() {
 
+ 
     return (
         <div className="dash-l-nav">
 
@@ -12,7 +14,7 @@ function DashLeftNav() {
                 <h3>Menu</h3>
                 <div className="d-links">
                 <NavLink to="." className="linko">   <p className="active-p"> <i className="bi-grid"></i> Dashboard</p> </NavLink>
-                    <p> <i className="bi-folder"></i> Accounts</p>
+                <NavLink to="account" className="linko">  <p> <i className="bi-folder"></i> Accounts</p> </NavLink>
                    <NavLink to="deposit" className="linko"><p> <i className="bi-person"></i>Deposit</p> </NavLink> 
                     <p> <i className="bi-house"></i> Withdraw</p>
                 </div>
